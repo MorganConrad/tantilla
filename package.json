@@ -1,0 +1,17 @@
+{
+  "name": "tantilla",
+  "version": "0.0.1",
+  "description": "Battlesnake written in nodejs / micro",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MorganConrad/tantilla.git"
+  },
+  "dependencies": {
+    "micro": "^9.3"
+  },
+  "license": "MIT"
+}
