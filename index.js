@@ -6,7 +6,7 @@ const micro = require('micro');
 const boardjs = require('./board.js');
 let config = require('./config.js');
 
-console.dir(config);
+// console.dir(config);
 
 const DEFAULT_COLOR = '#666666'
 
@@ -137,9 +137,9 @@ function scoreBasedOnConfigValuations(possibles, board, valuations) {
 function reallyHungry(possibles, board) {
   console.log("really hungry");
   possibles.forEach((p) => {
-    let distances = board.urdata.board.food.map((f) => board.distanceCityBlock(p));
-    let closest = distances.sort();
-    p.score += (100.0 / closest[0]);
+    let distances = board.urdata.board.food.map(boardjs.distanceCityBlock(p)).sort((a,b) => a-b);
+    // console.dir(distances);
+    p.score += (100.0 / distances[0]);
   });
 
   return possibles;
@@ -152,7 +152,7 @@ function customRateMoves(possibles, inputs) {
 
 // if there are ties, you could something clever here
 function chooseBestRated(rated, health) {
-  if (health > 50)
+  if (health > 0)
     return rated[0];
   
   // if we are hungry, mix things up...

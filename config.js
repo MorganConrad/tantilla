@@ -9,5 +9,5 @@ module.exports = {
   color: '#00FFAA',
   name: 'Tantilla',
   backtrackPenalty: -50,
-  reallyHungry: 25
+  reallyHungry: 50
 }
