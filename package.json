@@ -1,7 +1,11 @@
 {
-  "name": "tantilla",
-  "version": "0.0.1",
+  "name": "Tantilla",
+  "version": "0.1.0",
+  "author": "Morgan Conrad  <flyingspaniel@gmail.com>",
   "description": "Battlesnake written in nodejs / micro",
+  "keywords": [
+    "Battlesnake", "micro"
+  ],
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
@@ -15,3 +19,4 @@
   },
   "license": "MIT"
 }
+
